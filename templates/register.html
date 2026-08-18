@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>
+AgriGuard - Register
+</title>
+
+
+<style>
+
+
+body {
+
+margin:0;
+
+font-family:Arial;
+
+
+background:
+
+linear-gradient(
+
+rgba(46,125,50,0.8),
+
+rgba(46,125,50,0.8)
+
+),
+
+url('/static/images/farm.jpg');
+
+background-size:cover;
+
+
+height:100vh;
+
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+
+}
+
+
+
+
+.register-card {
+
+
+background:white;
+
+
+width:90%;
+
+max-width:420px;
+
+
+padding:40px;
+
+
+border-radius:20px;
+
+
+box-shadow:0 10px 30px #555;
+
+
+text-align:center;
+
+
+}
+
+
+
+
+
+.logo {
+
+
+font-size:55px;
+
+
+}
+
+
+
+
+h1 {
+
+
+color:#2e7d32;
+
+
+}
+
+
+
+
+
+.subtitle {
+
+
+color:#666;
+
+margin-bottom:25px;
+
+
+}
+
+
+
+
+input {
+
+
+width:90%;
+
+
+padding:14px;
+
+
+margin:8px;
+
+
+border-radius:10px;
+
+
+border:1px solid #ccc;
+
+
+font-size:15px;
+
+
+}
+
+
+
+
+input:focus {
+
+
+outline:none;
+
+border-color:#2e7d32;
+
+
+}
+
+
+
+
+button {
+
+
+width:95%;
+
+
+padding:14px;
+
+
+margin-top:15px;
+
+
+background:#2e7d32;
+
+
+color:white;
+
+
+border:none;
+
+
+border-radius:10px;
+
+
+font-size:16px;
+
+
+cursor:pointer;
+
+transition:.3s;
+
+
+}
+
+
+
+
+button:hover {
+
+
+background:#1b5e20;
+
+transform:scale(1.03);
+
+
+}
+
+
+
+
+
+.password-text {
+
+
+font-size:13px;
+
+color:#777;
+
+
+}
+
+
+
+
+
+a {
+
+
+color:#2e7d32;
+
+
+font-weight:bold;
+
+
+text-decoration:none;
+
+
+}
+
+@media (max-width:768px){
+
+.container,
+.profile-container,
+.login-card,
+.register-card{
+
+    width:90%;
+
+}
+
+}
+
+
+</style>
+
+
+</head>
+
+
+
+<body>
+
+
+
+<div class="register-card">
+
+
+
+<div class="logo">
+
+🌱
+
+</div>
+
+
+
+<h1>
+
+AgriGuard
+
+</h1>
+
+
+<p class="subtitle">
+
+Create Your Farming Account
+
+</p>
+
+
+
+
+
+<form method="POST">
+
+
+
+<input
+
+type="text"
+
+name="name"
+
+placeholder="Full Name"
+
+required
+
+>
+
+
+
+<input
+
+type="text"
+
+name="email"
+
+placeholder="Email Address"
+
+required
+
+>
+
+
+
+
+<input
+    type="tel"
+    name="phone"
+    id="phone"
+    placeholder="Phone Number (09XXXXXXXXX)"
+    pattern="09[0-9]{9}"
+    maxlength="11"
+    minlength="11"
+    inputmode="numeric"
+    required
+>
+
+
+<input
+
+type="password"
+
+name="password"
+
+placeholder="Password"
+
+required
+
+>
+
+
+
+
+<p class="password-text">
+
+Password must be at least 6 characters
+
+</p>
+
+
+
+<button>
+
+Register
+
+</button>
+
+
+
+</form>
+
+
+
+
+
+<p>
+
+Already have an account?
+
+<a href="/login">
+
+Login
+
+</a>
+
+
+</p>
+
+
+
+<a href="/">
+
+🏠 Back Home
+
+</a>
+
+
+
+
+</div>
+
+
+</body>
+
+
+</html>

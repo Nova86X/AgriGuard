@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="{{ session.get('language', 'en') }}">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>AgriGuard - AI Disease Detection</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='css/ai.css') }}"
+    >
+
+</head>
+
+
+<body>
+
+    {% include "navbar.html" %}
+
+
+    <main class="ai-page">
+
+
+        <!-- =================================================
+             PAGE HEADER
+             ================================================= -->
+
+        <section class="ai-header">
+
+            <div class="ai-icon">
+                🤖
+            </div>
+
+            <h1 data-i18n="ai_page_title">
+                {{ lang.ai_page_title }}
+            </h1>
+
+            <p data-i18n="ai_page_description">
+                {{ lang.ai_page_description }}
+            </p>
+
+        </section>
+
+
+
+        <!-- =================================================
+             DETECTION CARD
+             ================================================= -->
+
+        <section class="detection-card">
+
+
+            <!-- UPLOAD -->
+
+            <div
+                class="upload-area"
+                id="uploadArea"
+            >
+
+                <div class="upload-icon">
+                    📷
+                </div>
+
+                <h2 data-i18n="upload_leaf_image">
+                    {{ lang.upload_leaf_image }}
+                </h2>
+
+                <p data-i18n="upload_leaf_description">
+                    Select a clear photo of the plant leaf
+                    you want to analyze.
+                </p>
+
+
+                <label
+                    for="imageInput"
+                    class="upload-button"
+                    data-i18n="choose_image"
+                >
+                    Choose Image
+                </label>
+
+
+                <input
+                    type="file"
+                    id="imageInput"
+                    name="image"
+                    accept="image/jpeg,image/png,image/jpg,image/webp"
+                    hidden
+                >
+
+
+                <p
+                    class="file-info"
+                    data-i18n="image_formats"
+                >
+                    JPG, JPEG, PNG or WEBP
+                </p>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 PREVIEW
+                 ================================================= -->
+
+            <div
+                class="preview-container"
+                id="previewContainer"
+            >
+
+                <h3 data-i18n="selected_image">
+                    Selected Image
+                </h3>
+
+
+                <img
+                    id="imagePreview"
+                    src=""
+                    alt="Selected plant leaf"
+                >
+
+
+                <button
+                    type="button"
+                    id="detectButton"
+                    class="detect-button"
+                    data-i18n="detect_disease"
+                >
+                    🤖 Detect Disease
+                </button>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 LOADING
+                 ================================================= -->
+
+            <div
+                class="loading-container"
+                id="loadingContainer"
+            >
+
+                <div class="spinner"></div>
+
+                <h3 data-i18n="analyzing_plant">
+                    Analyzing your plant...
+                </h3>
+
+                <p data-i18n="analyzing_description">
+                    Please wait while AgriGuard's AI examines
+                    the image.
+                </p>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 RESULT
+                 ================================================= -->
+
+            <div
+                class="result-container"
+                id="resultContainer"
+            >
+
+                <!-- Dynamic crop / disease icon -->
+
+                <div
+                    class="result-icon"
+                    id="resultIcon"
+                >
+                    🌱
+                </div>
+
+
+                <h2
+                    id="resultTitle"
+                    data-i18n="detection_result"
+                >
+                    Detection Result
+                </h2>
+
+
+                <p
+                    class="prediction-label"
+                    data-i18n="prediction"
+                >
+                    Prediction
+                </p>
+
+
+                <h3 id="prediction">
+                    -
+                </h3>
+
+
+
+                <!-- Confidence -->
+
+                <div class="confidence-box">
+
+                    <span data-i18n="confidence">
+                        Confidence
+                    </span>
+
+                    <strong id="confidence">
+                        -
+                    </strong>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     RESULT INFORMATION
+                     ================================================= -->
+
+                <div class="result-information">
+
+
+                    <!-- Plant -->
+
+                    <div class="result-info-item">
+
+                        <div class="result-info-icon">
+                            🌱
+                        </div>
+
+                        <div>
+
+                            <span
+                                class="result-info-label"
+                                data-i18n="plant"
+                            >
+                                Plant
+                            </span>
+
+                            <strong id="plantName">
+                                -
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Myanmar Plant Name -->
+
+                    <div class="result-info-item">
+
+                        <div class="result-info-icon">
+                            🇲🇲
+                        </div>
+
+                        <div>
+
+                            <span
+                                class="result-info-label"
+                                data-i18n="myanmar_name"
+                            >
+                                Myanmar Name
+                            </span>
+
+                            <strong id="plantMyanmar">
+                                -
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Condition -->
+
+                    <div class="result-info-item">
+
+                        <div class="result-info-icon">
+                            🔬
+                        </div>
+
+                        <div>
+
+                            <span
+                                class="result-info-label"
+                                data-i18n="condition"
+                            >
+                                Condition
+                            </span>
+
+                            <strong id="diseaseName">
+                                -
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Myanmar Disease -->
+
+                    <div class="result-info-item">
+
+                        <div class="result-info-icon">
+                            🇲🇲
+                        </div>
+
+                        <div>
+
+                            <span
+                                class="result-info-label"
+                                data-i18n="disease_name"
+                            >
+                                Disease Name
+                            </span>
+
+                            <strong id="diseaseMyanmar">
+                                -
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     RESULT MESSAGE
+                     ================================================= -->
+
+                <p
+                    id="resultMessage"
+                    class="result-message"
+                ></p>
+
+
+
+                <!-- =================================================
+                     TREATMENT RECOMMENDATION
+                     ================================================= -->
+
+                <div
+                    id="recommendationBox"
+                    class="recommendation-box"
+                >
+
+                    <div class="recommendation-header">
+
+                        <span
+                            class="recommendation-icon"
+                            id="recommendationIcon"
+                        >
+                            🌿
+                        </span>
+
+                        <span
+                            id="recommendationTitle"
+                            data-i18n="treatment_recommendation"
+                        >
+                            Treatment Recommendation
+                        </span>
+
+                    </div>
+
+
+                    <div class="recommendation-content">
+
+                        <p id="recommendationText"></p>
+
+
+                        <div
+                            id="recommendationMyanmarContainer"
+                            class="recommendation-myanmar"
+                        >
+
+                            <h4 data-i18n="treatment_myanmar">
+                                🇲🇲 ကုသရန်အကြံပြုချက်
+                            </h4>
+
+                            <p id="recommendationMyanmar"></p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- NEW SCAN -->
+
+                <button
+                    type="button"
+                    id="newScanButton"
+                    class="new-scan-button"
+                    data-i18n="scan_another"
+                >
+                    🔄 Scan Another Image
+                </button>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 ERROR
+                 ================================================= -->
+
+            <div
+                class="error-container"
+                id="errorContainer"
+            >
+
+                <div class="error-icon">
+                    ⚠️
+                </div>
+
+                <h3 data-i18n="detection_failed">
+                    Detection Failed
+                </h3>
+
+                <p
+                    id="errorMessage"
+                    data-i18n="detection_error"
+                >
+                    Something went wrong while analyzing the image.
+                </p>
+
+                <button
+                    type="button"
+                    id="retryButton"
+                    class="new-scan-button"
+                    data-i18n="try_again"
+                >
+                    🔄 Try Again
+                </button>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             INFORMATION
+             ================================================= -->
+
+        <section class="ai-information">
+
+
+            <div class="info-card">
+
+                <span>
+                    📸
+                </span>
+
+                <h3 data-i18n="clear_image_title">
+                    {{ lang.clear_image_title }}
+                </h3>
+
+                <p data-i18n="clear_image_description">
+                    {{ lang.clear_image_description }}
+                </p>
+
+            </div>
+
+
+
+            <div class="info-card">
+
+                <span>
+                    🤖
+                </span>
+
+                <h3 data-i18n="ai_analysis_title">
+                    {{ lang.ai_analysis_title }}
+                </h3>
+
+                <p data-i18n="ai_analysis_description">
+                    {{ lang.ai_analysis_description}}
+                </p>
+
+            </div>
+
+
+
+            <div class="info-card">
+
+                <span>
+                    🌱
+                </span>
+
+                <h3 data-i18n="plant_conditions">
+                    {{ lang.plant_conditions}}
+                </h3>
+
+                <p data-i18n="plant_conditions_description">
+                    {{ lang.plant_conditions_description }}
+                </p>
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <script
+        src="{{ url_for('static', filename='js/ai.js') }}"
+    ></script>
+
+    <script
+        src="{{ url_for('static', filename='js/navbar.js') }}"
+    ></script>
+
+
+</body>
+
+</html>

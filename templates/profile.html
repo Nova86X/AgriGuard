@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>
+Profile - AgriGuard
+</title>
+
+<style>
+
+
+body {
+
+    margin:0;
+
+    font-family:
+
+    "Noto Sans Myanmar",
+    "Pyidaungsu",
+    "Myanmar Text",
+    Arial,
+    sans-serif;
+
+    background:#f2f7f2;
+
+}
+
+
+
+
+.profile-container {
+
+
+    width:90%;
+
+    max-width:500px;
+
+    margin:50px auto;
+
+
+}
+
+
+
+
+.profile-card {
+
+
+    background:white;
+
+    padding:35px;
+
+    border-radius:20px;
+
+    box-shadow:0 10px 25px #ccc;
+
+    text-align:center;
+
+
+}
+
+
+
+
+
+.profile-image {
+
+
+    width:35vw;
+
+    height:35vw;
+    
+    max-width:150px;
+    
+    max-height:150px;
+    
+    min-width:100px;
+    
+    min-height:100px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    border:5px solid #2e7d32;
+
+}
+
+
+
+
+h1 {
+
+
+    color:#2e7d32;
+
+
+}
+
+
+
+.subtitle {
+
+
+    color:#777;
+
+    margin-bottom:25px;
+
+
+}
+
+
+
+
+.section {
+
+
+    margin-top:25px;
+
+    text-align:left;
+
+}
+
+
+
+.section h3 {
+
+
+    color:#2e7d32;
+
+    border-bottom:1px solid #ddd;
+
+    padding-bottom:8px;
+
+
+}
+
+
+
+
+input {
+
+
+    width:95%;
+
+    padding:12px;
+
+    margin:8px 0;
+
+    border-radius:8px;
+
+    border:1px solid #ccc;
+
+    box-sizing:border-box;
+
+}
+
+
+
+
+.profile-card button {
+
+
+    margin-top:15px;
+
+    width:100%;
+
+    padding:13px;
+
+
+    background:#2e7d32;
+
+    color:white;
+
+    border:none;
+
+    border-radius:10px;
+
+    font-size:16px;
+
+    cursor:pointer;
+
+
+}
+
+
+
+
+.profile-card button:hover {
+
+
+    background:#1b5e20;
+
+
+}
+
+
+
+
+.info {
+
+
+    background:#f7faf7;
+
+    padding:12px;
+
+    margin:10px 0;
+
+    border-radius:8px;
+
+
+}
+
+
+
+
+.label {
+
+
+    font-weight:bold;
+
+    color:#2e7d32;
+
+}
+
+@media (max-width:768px){
+
+.container,
+.profile-container,
+.login-card,
+.register-card{
+
+    width:90%;
+
+}
+
+}
+
+
+</style>
+
+
+</head>
+
+
+
+<body>
+
+
+{% include "navbar.html" %}
+
+
+
+
+<div class="profile-container">
+
+
+<div class="profile-card">
+
+
+
+
+
+<h1>
+
+👤 My Profile
+
+</h1>
+
+
+<p class="subtitle">
+
+Manage your AgriGuard account
+
+</p>
+
+
+
+
+{% if user[6] %}
+
+
+<img
+
+class="profile-image"
+
+src="/static/uploads/{{user[6]}}"
+
+
+>
+
+
+{% else %}
+
+
+<img
+
+class="profile-image"
+
+src="/static/images/default_profile.png"
+
+
+>
+
+
+{% endif %}
+
+
+
+
+
+
+
+<form method="POST" enctype="multipart/form-data">
+
+
+
+
+
+<div class="section">
+
+
+<h3>
+
+Change Profile Picture
+
+</h3>
+
+
+
+<input
+
+type="file"
+
+name="profile_image"
+
+accept="image/*"
+
+>
+
+</div>
+
+
+
+
+
+
+
+<div class="section">
+
+
+<h3>
+
+Edit Information
+
+</h3>
+
+
+
+<input
+
+type="text"
+
+name="name"
+
+value="{{user[1]}}"
+
+>
+
+
+
+<input
+
+type="email"
+
+name="email"
+
+value="{{user[2]}}"
+
+>
+
+
+
+<input
+
+type="text"
+
+name="phone"
+
+value="{{user[3]}}"
+
+>
+
+
+
+<button>
+
+Save Changes
+
+</button>
+
+
+
+</div>
+
+
+
+
+
+</form>
+
+
+
+
+
+
+
+
+<div class="section">
+
+
+<h3>
+
+Account Information
+
+</h3>
+
+
+
+
+<div class="info">
+
+<span class="label">
+
+Name:
+
+</span>
+
+{{user[1]}}
+
+</div>
+
+
+
+
+<div class="info">
+
+<span class="label">
+
+Email:
+
+</span>
+
+{{user[2]}}
+
+</div>
+
+
+
+
+
+<div class="info">
+
+<span class="label">
+
+Phone:
+
+</span>
+
+{{user[3]}}
+
+</div>
+
+
+
+
+
+<div class="info">
+
+<span class="label">
+
+Joined:
+
+</span>
+
+{{user[5]}}
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+</div>
+
+
+</div>
+
+<script src="{{ url_for('static', filename='js/navbar.js') }}"></script>
+
+</body>
+
+
+</html>

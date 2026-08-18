@@ -1,0 +1,328 @@
+/* =========================================================
+   AgriGuard - My Crops
+   ========================================================= */
+
+.crops-page {
+
+    font-family:
+        "Noto Sans Myanmar",
+        "Pyidaungsu",
+        "Myanmar Text",
+        Arial,
+        sans-serif;
+
+    background: #f2f7f2;
+
+    min-height: 100vh;
+}
+
+
+/* ================= PAGE HEADER ================= */
+
+.crops-header {
+    background: #2e7d32;
+    color: white;
+
+    padding: 25px 20px;
+
+    text-align: center;
+
+    margin-top: 0;
+}
+
+.page-content {
+    padding-top: 72px;
+}
+
+.crops-header h1 {
+
+    margin: 0;
+
+    font-size: 32px;
+}
+
+
+/* ================= CONTENT ================= */
+
+.crops-container {
+
+    width: 100%;
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 30px 20px;
+
+    box-sizing: border-box;
+}
+
+
+/* ================= TOP BAR ================= */
+
+.crops-top-bar {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 25px;
+}
+
+
+.crops-back-btn {
+
+    text-decoration: none;
+
+    color: #2e7d32;
+
+    font-weight: bold;
+}
+
+
+.crops-add-btn {
+
+    background: #2e7d32;
+
+    color: white;
+
+    padding: 12px 18px;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    white-space: nowrap;
+
+    transition: 0.2s ease;
+}
+
+
+.crops-add-btn:hover {
+
+    background: #1b5e20;
+
+}
+
+
+/* ================= TABLE ================= */
+
+.crops-table-box {
+
+    width: 100%;
+
+    background: white;
+
+    border-radius: 15px;
+
+    padding: 20px;
+
+    box-shadow: 0 0 12px #ccc;
+
+    overflow-x: auto;
+
+    box-sizing: border-box;
+}
+
+
+.crops-table {
+
+    width: 100%;
+
+    min-width: 700px;
+
+    border-collapse: collapse;
+}
+
+
+.crops-table th {
+
+    background: #2e7d32;
+
+    color: white;
+
+    padding: 15px;
+
+    text-align: center;
+
+    white-space: nowrap;
+}
+
+
+.crops-table td {
+
+    padding: 15px;
+
+    text-align: center;
+
+    border-bottom: 1px solid #ddd;
+}
+
+
+.crops-table tr:hover {
+
+    background: #f1f8f1;
+}
+
+
+/* ================= STATUS ================= */
+
+.crop-status {
+
+    padding: 8px 15px;
+
+    border-radius: 20px;
+
+    font-weight: bold;
+
+    display: inline-block;
+
+    white-space: nowrap;
+}
+
+
+.crop-status.healthy {
+
+    background: #c8e6c9;
+
+    color: #1b5e20;
+}
+
+
+.crop-status.attention {
+
+    background: #ffe0b2;
+
+    color: #e65100;
+}
+
+
+.crop-status.infected {
+
+    background: #ffcdd2;
+
+    color: #b71c1c;
+}
+
+
+/* ================= ACTION BUTTONS ================= */
+
+.crop-action-btn {
+
+    padding: 8px 12px;
+
+    text-decoration: none;
+
+    border-radius: 6px;
+
+    color: white;
+
+    margin: 3px;
+
+    display: inline-block;
+
+    white-space: nowrap;
+}
+
+
+.crop-action-btn.edit {
+
+    background: orange;
+}
+
+
+.crop-action-btn.delete {
+
+    background: red;
+}
+
+
+/* ================= EMPTY ================= */
+
+.crops-empty {
+
+    padding: 30px;
+
+    text-align: center;
+
+    color: #777;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .crops-header {
+
+        padding: 20px 15px;
+    }
+
+
+    .crops-header h1 {
+
+        font-size: 27px;
+    }
+
+
+    .crops-container {
+
+        padding: 20px 12px;
+    }
+
+
+    .crops-top-bar {
+
+        align-items: stretch;
+
+        flex-direction: column;
+
+        margin-bottom: 20px;
+    }
+
+
+    .crops-back-btn {
+
+        text-align: left;
+    }
+
+
+    .crops-add-btn {
+
+        text-align: center;
+
+        width: 100%;
+
+        box-sizing: border-box;
+    }
+
+
+    .crops-table-box {
+
+        padding: 10px;
+
+        border-radius: 10px;
+    }
+
+
+    .crops-table {
+
+        min-width: 700px;
+    }
+
+
+    .crops-table th,
+    .crops-table td {
+
+        padding: 12px 10px;
+    }
+
+}

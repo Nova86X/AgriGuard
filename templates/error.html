@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+
+<html lang="{{ session.get('language', 'en') }}">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        AgriGuard - {{ title }}
+    </title>
+
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+
+        body {
+
+            margin: 0;
+
+            font-family:
+                "Noto Sans Myanmar",
+                "Myanmar Text",
+                "Pyidaungsu",
+                "Poppins",
+                Arial,
+                sans-serif;
+
+            background:
+                linear-gradient(
+                    rgba(46,125,50,0.85),
+                    rgba(27,94,32,0.9)
+                ),
+                url("/static/images/farm.jpg");
+
+            background-size: cover;
+            background-position: center;
+
+            min-height: 100vh;
+
+            display: flex;
+
+            justify-content: center;
+            align-items: center;
+
+            padding: 20px;
+
+        }
+
+
+        .card {
+
+            width: min(440px, 100%);
+
+            background: white;
+
+            padding: 40px 30px;
+
+            border-radius: 20px;
+
+            box-shadow:
+                0 15px 40px rgba(0,0,0,0.25);
+
+            text-align: center;
+
+            animation:
+                fadeIn 0.35s ease;
+
+        }
+
+
+        @keyframes fadeIn {
+
+            from {
+
+                opacity: 0;
+
+                transform:
+                    translateY(15px);
+
+            }
+
+            to {
+
+                opacity: 1;
+
+                transform:
+                    translateY(0);
+
+            }
+
+        }
+
+
+        .icon {
+
+            width: 80px;
+
+            height: 80px;
+
+            margin: 0 auto 20px;
+
+            border-radius: 50%;
+
+            background: #ffebee;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            font-size: 42px;
+
+        }
+
+
+        h1 {
+
+            margin: 0 0 15px;
+
+            color: #c62828;
+
+            font-size: 28px;
+
+        }
+
+
+        .message {
+
+            color: #59635b;
+
+            line-height: 1.7;
+
+            margin: 0 auto 25px;
+
+            font-size: 16px;
+
+        }
+
+
+        .buttons {
+
+            display: flex;
+
+            justify-content: center;
+
+            gap: 10px;
+
+            flex-wrap: wrap;
+
+        }
+
+
+        .btn {
+
+            display: inline-block;
+
+            padding: 13px 22px;
+
+            border-radius: 10px;
+
+            text-decoration: none;
+
+            font-weight: bold;
+
+            transition:
+                transform 0.2s ease,
+                box-shadow 0.2s ease;
+
+        }
+
+
+        .btn:hover {
+
+            transform:
+                translateY(-2px);
+
+        }
+
+
+        .retry {
+
+            background: #2e7d32;
+
+            color: white;
+
+        }
+
+
+        .retry:hover {
+
+            box-shadow:
+                0 6px 15px rgba(46,125,50,0.3);
+
+        }
+
+
+        .home {
+
+            background: #eeeeee;
+
+            color: #333;
+
+        }
+
+
+        .home:hover {
+
+            background: #e0e0e0;
+
+        }
+
+
+        @media (max-width: 500px) {
+
+            .card {
+
+                padding: 32px 22px;
+
+            }
+
+            h1 {
+
+                font-size: 24px;
+
+            }
+
+            .message {
+
+                font-size: 15px;
+
+            }
+
+            .btn {
+
+                width: 100%;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<div class="card">
+
+
+    <div class="icon">
+
+        {{ icon|default("❌") }}
+
+    </div>
+
+
+    <h1>
+
+        {{ title }}
+
+    </h1>
+
+
+    <p class="message">
+
+        {{ message }}
+
+    </p>
+
+
+    <div class="buttons">
+
+
+        <a
+            class="btn retry"
+            href="{{ retry_url }}"
+        >
+
+            {{ lang.try_again }}
+
+        </a>
+
+
+        <a
+            class="btn home"
+            href="/"
+        >
+
+            🏠 {{ lang.home }}
+
+        </a>
+
+
+    </div>
+
+
+</div>
+
+
+</body>
+
+</html>

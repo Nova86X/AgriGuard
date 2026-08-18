@@ -1,0 +1,304 @@
+{
+  "Apple___Apple_scab": {
+    "type": "disease",
+    "plant": "Apple",
+    "disease": "Apple Scab",
+    "icon": "🍎",
+    "treatment": "- Remove infected leaves and fallen debris.\n - Improve air circulation and reduce prolonged leaf wetness.\n - Use an appropriate fungicide according to the product label when disease pressure is high.",
+    "treatment_mm": "- ရောဂါဖြစ်နေသော အရွက်များနှင့် ကြွေကျနေသော အရွက်အမှိုက်များကို ဖယ်ရှားပါ။\n - လေဝင်လေထွက်ကောင်းအောင် ပြုလုပ်ပြီး အရွက်များ အချိန်ကြာကြာ စိုစွတ်နေခြင်းကို လျှော့ချပါ။\n - ရောဂါဖြစ်ပွားမှုများပါက သင့်လျော်သော မှိုသတ်ဆေးကို ထုတ်ကုန်ညွှန်ကြားချက်အတိုင်း အသုံးပြုပါ။"
+  },
+  "Apple___Black_rot": {
+    "type": "disease",
+    "plant": "Apple",
+    "disease": "Black Rot",
+    "icon": "🍎",
+    "treatment": "- Remove and destroy infected fruit, leaves, and dead wood.\n - Keep the canopy open for better air circulation and avoid overhead watering.\n - Use an appropriate fungicide according to the label when necessary.",
+    "treatment_mm": "- ရောဂါဖြစ်နေသော အသီးများ၊ အရွက်များနှင့် အကိုင်းခြောက်များကို ဖယ်ရှားဖျက်ဆီးပါ။\n - လေဝင်လေထွက်ကောင်းစေရန် အပင်အုပ်ကို မထူထပ်အောင် ထိန်းသိမ်းပြီး အပေါ်မှရေလောင်းခြင်းကို ရှောင်ပါ။\n - လိုအပ်ပါက သင့်လျော်သော မှိုသတ်ဆေးကို ညွှန်ကြားချက်အတိုင်း အသုံးပြုပါ။"
+  },
+  "Apple___Cedar_apple_rust": {
+    "type": "disease",
+    "plant": "Apple",
+    "disease": "Cedar Apple Rust",
+    "icon": "🍎",
+    "treatment": "- Remove severely infected leaves when practical and improve air circulation.\n - Remove nearby alternate hosts when appropriate.\n - Use a suitable fungicide according to the product label if disease pressure is significant.",
+    "treatment_mm": "- ပြင်းထန်စွာ ရောဂါဖြစ်နေသော အရွက်များကို ဖြစ်နိုင်ပါက ဖယ်ရှားပါ။\n - လေဝင်လေထွက်ကောင်းအောင် ပြုလုပ်ပါ။\n - သင့်လျော်ပါက အနီးအနားရှိ ရောဂါပိုး၏ အခြားအပင်လက်ခံများကို ဖယ်ရှားပါ။\n - ရောဂါဖြစ်ပွားမှုများပါက သင့်လျော်သော မှိုသတ်ဆေးကို ညွှန်ကြားချက်အတိုင်း အသုံးပြုပါ။"
+  },
+  "Apple___healthy": {
+    "type": "healthy",
+    "plant": "Apple",
+    "disease": "Healthy",
+    "icon": "🍎"
+  },
+
+  "Background_without_leaves": {
+    "type": "background",
+    "plant": "",
+    "disease": "No Leaf Detected",
+    "icon": "📷"
+  },
+
+  "Blueberry___healthy": {
+    "type": "healthy",
+    "plant": "Blueberry",
+    "disease": "Healthy",
+    "icon": "🫐"
+  },
+
+  "Cherry___Powdery_mildew": {
+    "type": "disease",
+    "plant": "Cherry",
+    "disease": "Powdery Mildew",
+    "icon": "🍒",
+    "treatment": "- Remove severely affected leaves and shoots.\n - Improve sunlight and air circulation and avoid excessive nitrogen fertilization.\n - Use an appropriate fungicide or approved treatment according to the product label when necessary.",
+    "treatment_mm": "- ပြင်းထန်စွာ ရောဂါဖြစ်နေသော အရွက်များနှင့် အညွန့်များကို ဖယ်ရှားပါ။\n - နေရောင်ရရှိမှုနှင့် လေဝင်လေထွက်ကောင်းမွန်စေရန် ပြုလုပ်ပြီး နိုက်ထရိုဂျင်ဓာတ်မြေဩဇာကို အလွန်အကျွံ မသုံးပါနှင့်။\n - လိုအပ်ပါက သင့်လျော်သော မှိုသတ်ဆေး သို့မဟုတ် ခွင့်ပြုထားသော ကုသမှုကို ညွှန်ကြားချက်အတိုင်း အသုံးပြုပါ။"
+  },
+  "Cherry___healthy": {
+    "type": "healthy",
+    "plant": "Cherry",
+    "disease": "Healthy",
+    "icon": "🍒"
+  },
+
+  "Corn___Cercospora_leaf_spot Gray_leaf_spot": {
+    "type": "disease",
+    "plant": "Corn",
+    "disease": "Cercospora Leaf Spot / Gray Leaf Spot",
+    "icon": "🌽",
+    "treatment": "- Use resistant varieties when available.\n - Rotate crops and manage infected crop residue.\n - Improve field airflow where possible.\n - Fungicides may be considered when disease risk is high and according to the product label.",
+    "treatment_mm": "- ရောဂါခံနိုင်ရည်ရှိသော မျိုးများကို ရရှိပါက အသုံးပြုပါ။\n - သီးနှံလှည့်စိုက်ခြင်းနှင့် ရောဂါဖြစ်ထားသော အပင်အကြွင်းအကျန်များကို စီမံပါ။\n - ဖြစ်နိုင်ပါက လေဝင်လေထွက်ကောင်းမွန်အောင် ပြုလုပ်ပါ။\n - ရောဂါဖြစ်နိုင်ခြေ မြင့်မားပါက ထုတ်ကုန်ညွှန်ကြားချက်နှင့်အညီ မှိုသတ်ဆေးအသုံးပြုရန် စဉ်းစားနိုင်ပါသည်။"
+
+    },
+  "Corn___Common_rust": {
+    "type": "disease",
+    "plant": "Corn",
+    "disease": "Common Rust",
+    "icon": "🌽",
+    "treatment": "- Plant resistant corn hybrids when available and monitor the crop regularly.\n - Fungicides can be considered early when disease is developing and when economically justified.",
+    "treatment_mm": "- ရရှိပါက ရောဂါခံနိုင်ရည်ရှိသော ပြောင်းမျိုးများကို စိုက်ပျိုးပါ။ သီးနှံကို ပုံမှန်စစ်ဆေးပါ။\n - ရောဂါစတင်ဖြစ်ပေါ်ချိန်တွင် လိုအပ်ပါက သင့်လျော်သော မှိုသတ်ဆေးအသုံးပြုရန် စဉ်းစားနိုင်ပါသည်။"
+  },
+  "Corn___Northern_Leaf_Blight": {
+    "type": "disease",
+    "plant": "Corn",
+    "disease": "Northern Leaf Blight",
+    "icon": "🌽",
+    "treatment": "- Use resistant hybrids when available.\n - Rotate crops and manage infected crop residue.\n - Monitor the crop closely, especially during prolonged wet conditions.\n - Use fungicides when appropriate and according to the label.",
+    "treatment_mm": "- ရရှိပါက ရောဂါခံနိုင်ရည်ရှိသော ပြောင်းမျိုးများကို အသုံးပြုပါ။\n - သီးနှံလှည့်စိုက်ခြင်းနှင့် ရောဂါဖြစ်ထားသော အပင်အကြွင်းအကျန်များကို စီမံပါ။\n - မိုးစိုစွတ်မှုများသော အခြေအနေများတွင် သီးနှံကို ပိုမိုဂရုတစိုက် စစ်ဆေးပါ။\n - လိုအပ်ပါက ညွှန်ကြားချက်အတိုင်း မှိုသတ်ဆေးအသုံးပြုပါ။"
+  },
+  "Corn___healthy": {
+    "type": "healthy",
+    "plant": "Corn",
+    "disease": "Healthy",
+    "icon": "🌽"
+  },
+
+  "Grape___Black_rot": {
+    "type": "disease",
+    "plant": "Grape",
+    "disease": "Black Rot",
+    "icon": "🍇",
+    "treatment": "- Remove and destroy mummified fruit and infected plant material.\n - Improve canopy airflow and remove infected leaves or berries when practical.\n - Use an appropriate fungicide program according to the product label.",
+    "treatment_mm": "- ခြောက်သွေ့ပြီး ရောဂါဖြစ်နေသော အသီးများနှင့် ရောဂါဖြစ်ထားသော အပင်အစိတ်အပိုင်းများကို ဖယ်ရှားဖျက်ဆီးပါ။\n - အပင်အုပ်အတွင်း လေဝင်လေထွက်ကောင်းအောင် ပြုလုပ်ပါ။\n - ဖြစ်နိုင်ပါက ရောဂါဖြစ်နေသော အရွက်များနှင့် အသီးများကို ဖယ်ရှားပါ။\n - သင့်လျော်သော မှိုသတ်ဆေးကို ထုတ်ကုန်ညွှန်ကြားချက်အတိုင်း အသုံးပြုပါ။"
+  },
+  "Grape___Esca_(Black_Measles)": {
+    "type": "disease",
+    "plant": "Grape",
+    "disease": "Esca (Black Measles)",
+    "icon": "🍇",
+    "treatment": "- Remove severely affected plant parts and prune during dry conditions.\n - Remove infected wood from the vineyard and avoid spreading contaminated pruning material.\n - Consult a local plant disease specialist for severe cases.",
+    "treatment_mm": "- ပြင်းထန်စွာ ရောဂါဖြစ်နေသော အပင်အစိတ်အပိုင်းများကို ဖယ်ရှားပြီး ခြောက်သွေ့သောအချိန်တွင် ကိုင်းဖြတ်ပါ။\n - ရောဂါဖြစ်နေသော သစ်သားများကို စိုက်ခင်းမှ ဖယ်ရှားပါ။\n - ရောဂါပိုးပါသော ကိုင်းဖြတ်ပစ္စည်းများကို အခြားအပင်များထံ မကူးစက်စေရန် ရှောင်ပါ။\n - ပြင်းထန်သောအခြေအနေများတွင် အပင်ရောဂါကျွမ်းကျင်သူနှင့် တိုင်ပင်ပါ။"
+  },
+  "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)": {
+    "type": "disease",
+    "plant": "Grape",
+    "disease": "Leaf Blight (Isariopsis Leaf Spot)",
+    "icon": "🍇",
+    "treatment": "- Remove severely infected leaves and improve air circulation within the canopy.\n - Avoid prolonged leaf wetness and remove infected plant debris.\n - Use an appropriate fungicide according to the product label if needed.",
+    "treatment_mm": "- ပြင်းထန်စွာ ရောဂါဖြစ်နေသော အရွက်များကို ဖယ်ရှားပြီး အပင်အုပ်အတွင်း လေဝင်လေထွက်ကောင်းအောင် ပြုလုပ်ပါ။\n - အရွက်များ အချိန်ကြာကြာ စိုစွတ်နေခြင်းကို ရှောင်ပါ။\n - ရောဂါဖြစ်နေသော အပင်အကြွင်းအကျန်များကို ဖယ်ရှားပါ။\n - လိုအပ်ပါက သင့်လျော်သော မှိုသတ်ဆေးကို ညွှန်ကြားချက်အတိုင်း အသုံးပြုပါ။"
+  },
+  "Grape___healthy": {
+    "type": "healthy",
+    "plant": "Grape",
+    "disease": "Healthy",
+    "icon": "🍇"
+  },
+
+  "Orange___Haunglongbing_(Citrus_greening)": {
+    "type": "disease",
+    "plant": "Orange",
+    "disease": "Huanglongbing (Citrus Greening)",
+    "icon": "🍊",
+    "treatment": "- There is no simple cure for infected trees.\n - Confirm the diagnosis with a qualified plant disease service.\n - Remove severely infected trees when recommended and control the insect vectors according to local agricultural guidance.\n - Use certified disease-free planting material for new plants.",
+    "treatment_mm": "- ရောဂါကူးစက်ပြီးသော အပင်များအတွက် လွယ်ကူသော ကုသနည်းမရှိပါ။\n - အရည်အချင်းပြည့်မီသော အပင်ရောဂါစစ်ဆေးရေးဝန်ဆောင်မှုဖြင့် ရောဂါကို အတည်ပြုပါ။\n - အကြံပြုပါက ပြင်းထန်စွာ ရောဂါဖြစ်နေသော အပင်များကို ဖယ်ရှားပါ။\n - ရောဂါကို သယ်ဆောင်ပေးသော ပိုးမွှားများကို ဒေသဆိုင်ရာ စိုက်ပျိုးရေးလမ်းညွှန်ချက်နှင့်အညီ ထိန်းချုပ်ပါ။\n - အပင်အသစ်များအတွက် ရောဂါကင်းသော စိုက်ပျိုးပစ္စည်းများကို အသုံးပြုပါ။"
+  },
+
+  "Peach___Bacterial_spot": {
+    "type": "disease",
+    "plant": "Peach",
+    "disease": "Bacterial Spot",
+    "icon": "🍑",
+    "treatment": "- Use disease-resistant varieties when available.\n - Remove severely affected plant material and avoid working with wet foliage.\n - Improve airflow and use an approved bacterial disease management program according to local recommendations and product labels.",
+    "treatment_mm": "- ရရှိပါက ရောဂါခံနိုင်ရည်ရှိသော မက်မွန်မျိုးများကို အသုံးပြုပါ။\n - ပြင်းထန်စွာ ရောဂါဖြစ်နေသော အပင်အစိတ်အပိုင်းများကို ဖယ်ရှားပါ။\n - အရွက်များစိုနေချိန်တွင် အပင်ကို ကိုင်တွယ်ခြင်းကို ရှောင်ပါ။\n - လေဝင်လေထွက်ကောင်းအောင် ပြုလုပ်ပြီး ဒေသဆိုင်ရာ အကြံပြုချက်နှင့် ထုတ်ကုန်ညွှန်ကြားချက်အတိုင်း ဘက်တီးရီးယားရောဂါထိန်းချုပ်မှုကို ပြုလုပ်ပါ။"
+  },
+  "Peach___healthy": {
+    "type": "healthy",
+    "plant": "Peach",
+    "disease": "Healthy",
+    "icon": "🍑"
+  },
+
+  "Pepper,_bell___Bacterial_spot": {
+    "type": "disease",
+    "plant": "Bell Pepper",
+    "disease": "Bacterial Spot",
+    "icon": "🫑",
+    "treatment": "- Remove severely infected leaves and fruit.\n - Avoid overhead watering and working with wet plants.\n - Use disease-free seed or transplants and rotate crops.\n - Use approved treatments according to local recommendations and product labels.",
+    "treatment_mm": "- ပြင်းထန်စွာ ရောဂါဖြစ်နေသော အရွက်များနှင့် အသီးများကို ဖယ်ရှားပါ။\n - အပေါ်မှရေလောင်းခြင်းနှင့် အပင်စိုနေချိန်တွင် ကိုင်တွယ်ခြင်းကို ရှောင်ပါ။\n - ရောဂါကင်းသော မျိုးစေ့ သို့မဟုတ် ပျိုးပင်များကို အသုံးပြုပါ။\n - သီးနှံလှည့်စိုက်ပါ။\n - ဒေသဆိုင်ရာ အကြံပြုချက်နှင့် ထုတ်ကုန်ညွှန်ကြားချက်အတိုင်း ခွင့်ပြုထားသော ကုသမှုများကို အသုံးပြုပါ။"
+  },
+  "Pepper,_bell___healthy": {
+    "type": "healthy",
+    "plant": "Bell Pepper",
+    "disease": "Healthy",
+    "icon": "🫑"
+  },
+
+
+  "Potato___Early_blight": {
+    "type": "disease",
+    "plant": "Potato",
+    "disease": "Early Blight",
+    "icon": "🥔",
+    "treatment": "- Remove severely infected leaves and plant debris.\n - Keep foliage dry, improve airflow, and avoid unnecessary plant stress.\n - Use resistant varieties where available and consider an appropriate fungicide according to the product label.",
+    "treatment_mm": "- ပြင်းထန်စွာ ရောဂါဖြစ်နေသော အရွက်များနှင့် အပင်အကြွင်းအကျန်များကို ဖယ်ရှားပါ။\n - အရွက်များခြောက်သွေ့နေစေရန် ထိန်းသိမ်းပြီး လေဝင်လေထွက်ကောင်းအောင် ပြုလုပ်ပါ။\n - အပင်ကို မလိုအပ်ဘဲ ဖိအားပေးသည့် အခြေအနေများကို ရှောင်ပါ။\n - ရရှိပါက ရောဂါခံနိုင်ရည်ရှိသော မျိုးများကို အသုံးပြုပြီး လိုအပ်ပါက သင့်လျော်သော မှိုသတ်ဆေးကို ညွှန်ကြားချက်အတိုင်း အသုံးပြုပါ။"
+  },
+  "Potato___Late_blight": {
+    "type": "disease",
+    "plant": "Potato",
+    "disease": "Late Blight",
+    "icon": "🥔",
+    "treatment": "- Remove and destroy infected plant material and avoid overhead irrigation.\n - Monitor plants closely during cool, wet conditions. Use products specifically approved for late blight and follow the product label carefully.",
+    "treatment_mm": "- ရောဂါဖြစ်နေသော အပင်အစိတ်အပိုင်းများကို ဖယ်ရှားဖျက်ဆီးပြီး အပေါ်မှရေလောင်းခြင်းကို ရှောင်ပါ။\n - အေးပြီး စိုစွတ်သော ရာသီဥတုတွင် အပင်များကို ပိုမိုစောင့်ကြည့်ပါ။\n - Late Blight အတွက် ခွင့်ပြုထားသော ကုသဆေးများကိုသာ အသုံးပြုပြီး ထုတ်ကုန်ညွှန်ကြားချက်ကို တိတိကျကျ လိုက်နာပါ။"
+  },
+  "Potato___healthy": {
+    "type": "healthy",
+    "plant": "Potato",
+    "disease": "Healthy",
+    "icon": "🥔"
+  },
+
+  "Raspberry___healthy": {
+    "type": "healthy",
+    "plant": "Raspberry",
+    "disease": "Healthy",
+    "icon": "🍓"
+  },
+
+  "Soybean___healthy": {
+    "type": "healthy",
+    "plant": "Soybean",
+    "disease": "Healthy",
+    "icon": "🌱"
+  },
+
+  "Squash___Powdery_mildew": {
+    "type": "disease",
+    "plant": "Squash",
+    "disease": "Powdery Mildew",
+    "icon": "🎃",
+    "treatment": "- Remove severely infected leaves and improve sunlight and air circulation.\n - Avoid excessive nitrogen fertilizer and excessive humidity around foliage.\n - Use an appropriate fungicide or approved treatment according to the product label when necessary.",
+    "treatment_mm": "- ပြင်းထန်စွာ ရောဂါဖြစ်နေသော အရွက်များကို ဖယ်ရှားပါ။\n - နေရောင်ရရှိမှုနှင့် လေဝင်လေထွက်ကောင်းမွန်စေရန် ပြုလုပ်ပါ။\n - နိုက်ထရိုဂျင်ဓာတ်မြေဩဇာကို အလွန်အကျွံ မသုံးပါနှင့်။\n - အရွက်ပတ်ဝန်းကျင်တွင် စိုထိုင်းဆများလွန်းခြင်းကို ရှောင်ပါ။\n - လိုအပ်ပါက သင့်လျော်သော မှိုသတ်ဆေး သို့မဟုတ် ခွင့်ပြုထားသော ကုသမှုကို ညွှန်ကြားချက်အတိုင်း အသုံးပြုပါ။"
+  },
+
+  "Strawberry___Leaf_scorch": {
+    "type": "disease",
+    "plant": "Strawberry",
+    "disease": "Leaf Scorch",
+    "icon": "🍓",
+    "treatment": "- Remove severely affected leaves and infected debris.\n - Improve airflow and avoid prolonged leaf wetness.\n - Keep plants healthy with proper watering and nutrition.\n - Use an appropriate fungicide only when recommended and according to the label.",
+    "treatment_mm": "- ပြင်းထန်စွာ ထိခိုက်နေသော အရွက်များနှင့် ရောဂါဖြစ်နေသော အပင်အကြွင်းအကျန်များကို ဖယ်ရှားပါ။\n - လေဝင်လေထွက်ကောင်းအောင် ပြုလုပ်ပြီး အရွက်များ အချိန်ကြာကြာ စိုစွတ်နေခြင်းကို ရှောင်ပါ။\n - ရေသွင်းခြင်းနှင့် အာဟာရပေးခြင်းကို သင့်တင့်စွာပြုလုပ်ပြီး အပင်ကျန်းမာအောင် ထိန်းသိမ်းပါ။\n - အကြံပြုထားမှသာ သင့်လျော်သော မှိုသတ်ဆေးကို ညွှန်ကြားချက်အတိုင်း အသုံးပြုပါ။"
+  },
+  "Strawberry___healthy": {
+    "type": "healthy",
+    "plant": "Strawberry",
+    "disease": "Healthy",
+    "icon": "🍓"
+  },
+  "Tomato___Bacterial_spot": {
+    "type": "disease",
+    "plant": "Tomato",
+    "disease": "Bacterial Spot",
+    "icon": "🍅",
+    "treatment": "- Remove severely infected leaves and fruit.\n - Avoid overhead watering and handling wet plants.\n - Use disease-free seed or transplants and rotate crops.\n - Use approved treatments according to local recommendations and product labels.",
+    "treatment_mm": "- ပြင်းထန်စွာ ရောဂါဖြစ်နေသော အရွက်များနှင့် အသီးများကို ဖယ်ရှားပါ။\n - အပေါ်မှရေလောင်းခြင်းနှင့် အပင်စိုနေချိန်တွင် ကိုင်တွယ်ခြင်းကို ရှောင်ပါ။\n-  ရောဂါကင်းသော မျိုးစေ့ သို့မဟုတ် ပျိုးပင်များကို အသုံးပြုပါ။\n - သီးနှံလှည့်စိုက်ပါ။\n - ဒေသဆိုင်ရာ အကြံပြုချက်နှင့် ထုတ်ကုန်ညွှန်ကြားချက်အတိုင်း ခွင့်ပြုထားသော ကုသမှုများကို အသုံးပြုပါ။"
+  },
+  "Tomato___Early_blight": {
+    "type": "disease",
+    "plant": "Tomato",
+    "disease": "Early Blight",
+    "icon": "🍅",
+    "treatment": "- Remove infected leaves early while avoiding removal of more than one-third of the foliage.\n - Keep leaves dry, improve airflow, mulch around plants, and use resistant varieties when available.\n - Use an appropriate fungicide according to the product label when necessary.",
+    "treatment_mm": "- ရောဂါဖြစ်နေသော အရွက်များကို စောစောဖယ်ရှားပါ။\n - သို့သော် အပင်၏ အရွက်စုစုပေါင်း၏ သုံးပုံတစ်ပုံထက် ပိုမဖယ်ရှားပါနှင့်။\n - အရွက်များခြောက်သွေ့နေစေရန် ထိန်းသိမ်းပါ။\n - လေဝင်လေထွက်ကောင်းအောင် ပြုလုပ်ပြီး အပင်ပတ်လည်တွင် မြေဆီလွှာဖုံးအုပ်မှု ပြုလုပ်ပါ။\n - ရရှိပါက ရောဂါခံနိုင်ရည်ရှိသော မျိုးများကို အသုံးပြုပါ။\n - လိုအပ်ပါက သင့်လျော်သော မှိုသတ်ဆေးကို ညွှန်ကြားချက်အတိုင်း အသုံးပြုပါ။"
+  },
+  "Tomato___Late_blight": {
+    "type": "disease",
+    "plant": "Tomato",
+    "disease": "Late Blight",
+    "icon": "🍅",
+    "treatment": "- Remove and destroy infected plant material.\n - Avoid overhead watering and monitor plants closely during cool, wet weather.\n - Use products specifically approved for late blight and follow the product label.",
+    "treatment_mm": "- ရောဂါဖြစ်နေသော အပင်အစိတ်အပိုင်းများကို ဖယ်ရှားဖျက်ဆီးပါ။\n - အပေါ်မှရေလောင်းခြင်းကို ရှောင်ပါ။\n - အေးပြီး စိုစွတ်သော ရာသီဥတုတွင် အပင်များကို အနီးကပ်စောင့်ကြည့်ပါ။\n - Late Blight အတွက် ခွင့်ပြုထားသော ကုသဆေးများကို အသုံးပြုပြီး ထုတ်ကုန်ညွှန်ကြားချက်ကို လိုက်နာပါ။"
+  },
+  "Tomato___Leaf_Mold": {
+    "type": "disease",
+    "plant": "Tomato",
+    "disease": "Leaf Mold",
+    "icon": "🍅",
+    "treatment": "- Improve ventilation and reduce humidity around the foliage.\n - Avoid wetting the leaves and remove severely infected leaves.\n - Keep sufficient spacing between plants and use an appropriate treatment according to the product label when needed.",
+    "treatment_mm": "- အရွက်ပတ်ဝန်းကျင် လေဝင်လေထွက်ကောင်းစေရန် ပြုလုပ်ပြီး စိုထိုင်းဆကို လျှော့ချပါ။\n - အရွက်များကို ရေစိုစေခြင်းကို ရှောင်ပြီး ပြင်းထန်စွာ ရောဂါဖြစ်နေသော အရွက်များကို ဖယ်ရှားပါ။\n - အပင်များကြား လုံလောက်သော အကွာအဝေးထားပါ။\n - လိုအပ်ပါက ထုတ်ကုန်ညွှန်ကြားချက်အတိုင်း သင့်လျော်သော ကုသမှုကို အသုံးပြုပါ။"
+  },
+  "Tomato___Septoria_leaf_spot": {
+    "type": "disease",
+    "plant": "Tomato",
+    "disease": "Septoria Leaf Spot",
+    "icon": "🍅",
+    "treatment": "- Remove infected lower leaves and plant debris.\n - Keep foliage dry, mulch around plants, and improve air circulation.\n - Avoid overhead watering and use an appropriate fungicide according to the product label when necessary.",
+    "treatment_mm": "- ရောဂါဖြစ်နေသော အောက်ပိုင်းအရွက်များနှင့် အပင်အကြွင်းအကျန်များကို ဖယ်ရှားပါ။\n - အရွက်များခြောက်သွေ့နေစေရန် ထိန်းသိမ်းပြီး အပင်ပတ်လည်တွင် မြေဆီလွှာဖုံးအုပ်မှု ပြုလုပ်ပါ။\n - လေဝင်လေထွက်ကောင်းအောင် ပြုလုပ်ပြီး အပေါ်မှရေလောင်းခြင်းကို ရှောင်ပါ။\n - လိုအပ်ပါက သင့်လျော်သော မှိုသတ်ဆေးကို ညွှန်ကြားချက်အတိုင်း အသုံးပြုပါ။"
+  },
+  "Tomato___Spider_mites Two-spotted_spider_mite": {
+    "type": "disease",
+    "plant": "Tomato",
+    "disease": "Spider Mites (Two-spotted Spider Mite)",
+    "icon": "🍅",
+    "treatment": "- Inspect the undersides of leaves regularly.\n - Use a strong stream of water to dislodge mites when appropriate and reduce plant stress.\n - Encourage natural predators and use an appropriate miticide only when necessary and according to the product label.",
+    "treatment_mm": "- အရွက်အောက်ဘက်များကို ပုံမှန်စစ်ဆေးပါ။\n - သင့်လျော်ပါက ရေစီးအားအသင့်အတင့်ဖြင့် ပိုးများကို ဖယ်ရှားနိုင်ပါသည်။\n - အပင်ဖိအားလျော့စေရန် ကောင်းမွန်စွာ စောင့်ရှောက်ပါ။\n - သဘာဝပိုးစားသတ္တဝါများကို ထိန်းသိမ်းပေးပြီး လိုအပ်မှသာ သင့်လျော်သော ပိုးသတ်ဆေးကို ထုတ်ကုန်ညွှန်ကြားချက်အတိုင်း အသုံးပြုပါ။"
+  },
+  "Tomato___Target_Spot": {
+    "type": "disease",
+    "plant": "Tomato",
+    "disease": "Target Spot",
+    "icon": "🍅",
+    "treatment": "- Remove severely infected leaves and plant debris.\n - Improve airflow and keep foliage dry.\n - Avoid overhead irrigation and use an appropriate fungicide according to the product label when necessary.",
+    "treatment_mm": "- ပြင်းထန်စွာ ရောဂါဖြစ်နေသော အရွက်များနှင့် အပင်အကြွင်းအကျန်များကို ဖယ်ရှားပါ။\n - လေဝင်လေထွက်ကောင်းအောင် ပြုလုပ်ပြီး အရွက်များခြောက်သွေ့နေစေရန် ထိန်းသိမ်းပါ။\n - အပေါ်မှရေလောင်းခြင်းကို ရှောင်ပါ။\n - လိုအပ်ပါက သင့်လျော်သော မှိုသတ်ဆေးကို ထုတ်ကုန်ညွှန်ကြားချက်အတိုင်း အသုံးပြုပါ။"
+  },
+  "Tomato___Tomato_Yellow_Leaf_Curl_Virus": {
+    "type": "disease",
+    "plant": "Tomato",
+    "disease": "Tomato Yellow Leaf Curl Virus",
+    "icon": "🍅",
+    "treatment": "- There is no direct cure for infected plants.\n - Remove severely infected plants to reduce the source of infection and control whitefly vectors using appropriate integrated pest management.\n - Use healthy transplants and monitor plants regularly.",
+    "treatment_mm": "- ရောဂါကူးစက်ပြီးသော အပင်များအတွက် တိုက်ရိုက်ကုသနိုင်သော နည်းလမ်းမရှိပါ။\n - ရောဂါကူးစက်မှုအရင်းအမြစ် လျှော့ချရန် ပြင်းထန်စွာ ရောဂါဖြစ်နေသော အပင်များကို ဖယ်ရှားပါ။\n - Whitefly ပိုးများကို သင့်လျော်သော ပေါင်းစပ်ပိုးမွှားစီမံခန့်ခွဲမှုဖြင့် ထိန်းချုပ်ပါ။\n - ကျန်းမာသော ပျိုးပင်များကို အသုံးပြုပြီး အပင်များကို ပုံမှန်စစ်ဆေးပါ။"
+  },
+  "Tomato___Tomato_mosaic_virus": {
+    "type": "disease",
+    "plant": "Tomato",
+    "disease": "Tomato Mosaic Virus",
+    "icon": "🍅",
+    "treatment": "- There is no direct cure for infected plants.\n - Remove severely infected plants and control the spread by disinfecting tools and avoiding handling plants when they are wet.\n - Use healthy planting material and remove infected plant debris.",
+    "treatment_mm": "- ရောဂါကူးစက်ပြီးသော အပင်များအတွက် တိုက်ရိုက်ကုသနိုင်သော နည်းလမ်းမရှိပါ။\n - ပြင်းထန်စွာ ရောဂါဖြစ်နေသော အပင်များကို ဖယ်ရှားပါ။\n - ကိရိယာများကို သန့်စင်ပိုးသတ်ပြီး အပင်များစိုနေချိန်တွင် ကိုင်တွယ်ခြင်းကို ရှောင်ခြင်းဖြင့် ရောဂါပြန့်ပွားမှုကို လျှော့ချပါ။\n - ကျန်းမာသော စိုက်ပျိုးပစ္စည်းများကို အသုံးပြုပြီး ရောဂါဖြစ်နေသော အပင်အကြွင်းအကျန်များကို ဖယ်ရှားပါ။"
+  },
+  "Tomato___healthy": {
+    "type": "healthy",
+    "plant": "Tomato",
+    "disease": "Healthy",
+    "icon": "🍅"
+  }
+}
+    

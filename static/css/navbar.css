@@ -1,0 +1,821 @@
+/* =========================================================
+   AgriGuard - Global Navigation
+   Navigation System V3
+   ========================================================= */
+
+
+/* =========================================================
+   NAVBAR
+   ========================================================= */
+
+.navbar {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 72px;
+
+    box-sizing: border-box;
+
+    background: #2e7d32;
+
+    padding: 0 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    z-index: 99999;
+
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+
+}
+
+
+/* =========================================================
+   LOGO
+   ========================================================= */
+
+.logo {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    color: white;
+
+    font-size: 22px;
+
+    font-weight: bold;
+
+    text-decoration: none;
+
+    white-space: nowrap;
+
+    flex-shrink: 0;
+
+}
+
+
+.logo-img {
+
+    width: 42px;
+
+    height: 42px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    display: block;
+
+}
+
+
+/* =========================================================
+   NAVIGATION LINKS
+   ========================================================= */
+
+.nav-links {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-end;
+
+    gap: 6px;
+
+    height: 100%;
+
+}
+
+
+.nav-links > a {
+
+    color: white;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    padding: 9px 11px;
+
+    border-radius: 6px;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+
+    white-space: nowrap;
+
+}
+
+
+.nav-links > a:hover {
+
+    background: rgba(255, 255, 255, 0.12);
+
+}
+
+
+/* =========================================================
+   LANGUAGE
+   ========================================================= */
+
+.language-group {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 5px;
+
+    margin-left: 3px;
+
+}
+
+
+.language {
+
+    background: white;
+
+    color: #2e7d32 !important;
+
+    padding: 7px 11px !important;
+
+    border-radius: 6px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+
+}
+
+
+.language:hover {
+
+    background: #e8f5e9 !important;
+
+    transform: translateY(-1px);
+
+}
+
+
+/* =========================================================
+   LOGIN / REGISTER
+   ========================================================= */
+
+.auth-buttons {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+}
+
+
+.login-btn {
+
+    background: white;
+
+    color: #2e7d32 !important;
+
+    padding: 8px 13px !important;
+
+    border-radius: 6px;
+
+}
+
+
+.login-btn:hover {
+
+    background: #e8f5e9 !important;
+
+}
+
+
+/* =========================================================
+   PROFILE
+   ========================================================= */
+
+.profile-menu {
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    margin-left: 2px;
+
+}
+
+
+.profile-btn {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    border: none;
+
+    background: transparent;
+
+    color: white;
+
+    font-family: inherit;
+
+    font-size: inherit;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    padding: 9px 11px;
+
+    border-radius: 6px;
+
+    white-space: nowrap;
+
+    transition: background 0.2s ease;
+
+}
+
+
+.profile-btn:hover,
+.profile-btn:focus-visible {
+
+    background: rgba(255, 255, 255, 0.12);
+
+    outline: none;
+
+}
+
+
+.profile-arrow {
+
+    font-size: 10px;
+
+    transition: transform 0.2s ease;
+
+}
+
+
+/* =========================================================
+   PROFILE DROPDOWN
+   ========================================================= */
+
+.dropdown {
+
+    position: absolute;
+
+    top: calc(100% + 4px);
+
+    right: 0;
+
+    min-width: 180px;
+
+    background: white;
+
+    border-radius: 8px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 5px 18px rgba(0, 0, 0, 0.18);
+
+    padding: 5px 0;
+
+    display: none;
+
+}
+
+
+/* Small invisible bridge between button and dropdown.
+   Helps prevent the dropdown disappearing when moving
+   the mouse from the profile button to the menu. */
+
+.profile-menu::after {
+
+    content: "";
+
+    position: absolute;
+
+    top: 100%;
+
+    left: 0;
+
+    right: 0;
+
+    height: 8px;
+
+}
+
+
+/* Desktop hover */
+
+.profile-menu:hover .dropdown,
+.profile-menu:focus-within .dropdown {
+
+    display: block;
+
+}
+
+
+.profile-menu:hover .profile-arrow {
+
+    transform: rotate(180deg);
+
+}
+
+
+.dropdown a {
+
+    display: block;
+
+    color: #333 !important;
+
+    text-decoration: none;
+
+    padding: 12px 15px !important;
+
+    margin: 0;
+
+    border-radius: 0;
+
+    font-weight: normal;
+
+    white-space: nowrap;
+
+}
+
+
+.dropdown a:hover {
+
+    background: #e8f5e9;
+
+    color: #2e7d32 !important;
+
+}
+
+
+/* =========================================================
+   HAMBURGER
+   ========================================================= */
+
+.menu-btn {
+
+    display: none;
+
+    width: 44px;
+
+    height: 44px;
+
+    margin: 0;
+
+    padding: 0;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background: transparent;
+
+    color: white;
+
+    font-size: 30px;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-shrink: 0;
+
+}
+
+
+.menu-btn:hover {
+
+    background: rgba(255, 255, 255, 0.12);
+
+}
+
+
+.hamburger-icon {
+
+    display: block;
+
+    line-height: 1;
+
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1050px) {
+
+    .navbar {
+
+        padding: 0 20px;
+
+    }
+
+    .nav-links {
+
+        gap: 2px;
+
+    }
+
+    .nav-links > a {
+
+        padding: 8px 7px;
+
+        font-size: 14px;
+
+    }
+
+    .profile-btn {
+
+        font-size: 14px;
+
+        padding: 8px;
+
+    }
+
+    .language {
+
+        padding: 6px 8px !important;
+
+        font-size: 13px;
+
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .navbar {
+
+        height: 65px;
+
+        padding: 0 12px;
+
+    }
+
+
+    /* Logo stays on the left */
+
+    .logo {
+
+        min-width: 0;
+
+        flex: 1;
+
+        overflow: hidden;
+
+    }
+
+
+    .logo-img {
+
+        width: 38px;
+
+        height: 38px;
+
+        flex-shrink: 0;
+
+    }
+
+
+    .logo span {
+
+        font-size: 20px;
+
+        overflow: hidden;
+
+        text-overflow: ellipsis;
+
+    }
+
+
+    /* Hamburger stays on the RIGHT */
+
+    .menu-btn {
+
+        display: flex;
+
+        margin-left: 10px;
+
+        flex-shrink: 0;
+
+    }
+
+
+    /* Mobile menu */
+
+    .nav-links {
+
+        position: fixed;
+
+        top: 65px;
+
+        right: 0;
+
+        left: auto;
+
+        width: 290px;
+
+        max-width: 88vw;
+
+        height: calc(100vh - 65px);
+
+        box-sizing: border-box;
+
+        background: #2e7d32;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        justify-content: flex-start;
+
+        gap: 0;
+
+        padding: 15px;
+
+        overflow-y: auto;
+
+        overflow-x: hidden;
+
+        transform: translateX(110%);
+
+        visibility: hidden;
+
+        transition:
+            transform 0.25s ease,
+            visibility 0.25s ease;
+
+        box-shadow:
+            -5px 0 15px rgba(0, 0, 0, 0.2);
+
+    }
+
+
+    .nav-links.show {
+
+        transform: translateX(0);
+
+        visibility: visible;
+
+    }
+
+
+    /* Mobile links */
+
+    .nav-links > a {
+
+        width: 100%;
+
+        box-sizing: border-box;
+
+        padding: 13px 15px;
+
+        margin: 2px 0;
+
+        font-size: 16px;
+
+        border-radius: 7px;
+
+    }
+
+
+    .nav-links > a:hover {
+
+        background: rgba(255, 255, 255, 0.12);
+
+    }
+
+
+    /* Language */
+
+    .language-group {
+
+        display: flex;
+
+        width: 100%;
+
+        gap: 8px;
+
+        margin: 8px 0;
+
+    }
+
+
+    .language {
+
+        flex: 1;
+
+        text-align: center;
+
+        box-sizing: border-box;
+
+    }
+
+
+    /* Profile */
+
+    .profile-menu {
+
+        width: 100%;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        margin-top: 8px;
+
+        padding-top: 8px;
+
+        border-top:
+            1px solid rgba(255, 255, 255, 0.25);
+
+    }
+
+
+    .profile-btn {
+
+        width: 100%;
+
+        box-sizing: border-box;
+
+        justify-content: space-between;
+
+        padding: 13px 15px;
+
+        cursor: pointer;
+
+    }
+
+
+    /* Mobile dropdown */
+
+    .dropdown {
+
+        position: static;
+
+        width: 100%;
+
+        min-width: 0;
+
+        background: transparent;
+
+        box-shadow: none;
+
+        border-radius: 0;
+
+        padding: 0;
+
+        display: block;
+
+        overflow: visible;
+
+    }
+
+
+    .dropdown a {
+
+        color: white !important;
+
+        padding: 12px 15px !important;
+
+        border-radius: 7px;
+
+        font-weight: normal;
+
+    }
+
+
+    .dropdown a:hover {
+
+        background: rgba(255, 255, 255, 0.12);
+
+        color: white !important;
+
+    }
+
+
+    /* Login/Register */
+
+    .auth-buttons {
+
+        display: flex;
+
+        flex-direction: column;
+
+        width: 100%;
+
+        gap: 8px;
+
+        margin-top: 5px;
+
+    }
+
+
+    .auth-buttons .login-btn {
+
+        width: 100%;
+
+        box-sizing: border-box;
+
+        text-align: center;
+
+    }
+
+}
+
+
+/* =========================================================
+   SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 400px) {
+
+    .navbar {
+
+        padding: 0 8px;
+
+    }
+
+
+    .logo {
+
+        gap: 7px;
+
+    }
+
+
+    .logo-img {
+
+        width: 35px;
+
+        height: 35px;
+
+    }
+
+
+    .logo span {
+
+        font-size: 18px;
+
+    }
+
+
+    .menu-btn {
+
+        width: 42px;
+
+        height: 42px;
+
+        font-size: 28px;
+
+    }
+
+
+    .nav-links {
+
+        width: 270px;
+
+        max-width: 90vw;
+
+    }
+
+}

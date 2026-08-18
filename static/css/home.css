@@ -1,0 +1,817 @@
+/* =========================================================
+   AgriGuard Home Page
+   ========================================================= */
+
+
+/* =========================================================
+   GLOBAL
+   ========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    margin: 0;
+
+    font-family: "Noto Sans Myanmar", "Myanmar Text", "Pyidaungsu", "Poppins", Arial, sans-serif;
+    overflow-x: hidden;
+
+    background: #f4f8f4;
+
+    color: #263328;
+
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero {
+
+    position: relative;
+
+    z-index: 1;
+
+    min-height: calc(100vh - 72px);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    overflow: hidden;
+
+    background: #1b5e20;
+}
+
+/* =========================================================
+   HERO BACKGROUND
+   ========================================================= */
+
+.hero-background {
+
+    position: absolute;
+
+    inset: 0;
+
+    background-image:
+        url("/static/images/farm.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+    opacity: 1;
+
+    transition:
+        opacity 1.2s ease-in-out,
+        transform 8s ease;
+
+    z-index: -2;
+}
+
+.hero-background.zoom {
+
+    transform: scale(1.05);
+
+}
+
+
+
+
+.hero-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            rgba(0, 50, 10, 0.58),
+            rgba(0, 30, 5, 0.68)
+        );
+        z-index: -1;
+
+}
+
+
+.hero-content {
+
+    position: relative;
+
+    z-index: 1;
+
+    width: min(800px, 90%);
+
+    color: white;
+
+    padding: 76px 20px;
+
+}
+
+
+.hero-logo img {
+
+    width: 90px;
+
+    height: 90px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    border: 3px solid white;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.3);
+
+    margin-bottom: 20px;
+
+}
+
+
+.hero-label {
+
+    font-size: 14px;
+
+    letter-spacing: 4px;
+
+    font-weight: bold;
+
+    margin: 0 0 15px;
+
+    opacity: 0.9;
+
+}
+
+
+.hero h1 {
+
+    margin: 0;
+
+    font-size: clamp(42px, 7vw, 72px);
+
+    line-height: 1.05;
+
+    font-weight: 800;
+
+}
+
+
+.hero-description {
+
+    max-width: 650px;
+
+    margin: 22px auto;
+
+    font-size: 18px;
+
+    line-height: 1.7;
+
+    opacity: 0.95;
+
+}
+
+
+.hero-btn {
+
+    display: inline-block;
+
+    margin-top: 10px;
+
+    padding: 14px 28px;
+
+    background: white;
+
+    color: #2e7d32;
+
+    text-decoration: none;
+
+    border-radius: 10px;
+
+    font-weight: bold;
+
+    font-size: 16px;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+
+}
+
+
+.hero-btn:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.25);
+
+}
+
+/* =========================================================
+   HERO SLIDE CONTROLS
+   ========================================================= */
+
+.hero-controls {
+
+    position: absolute;
+
+    bottom: 28px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    z-index: 5;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+}
+
+
+/* Individual dot */
+
+.slide-dot {
+
+    width: 10px;
+
+    height: 10px;
+
+    padding: 0;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.55);
+
+    cursor: pointer;
+
+    transition:
+        width 0.25s ease,
+        background 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+/* Hover */
+
+.slide-dot:hover {
+
+    transform: scale(1.2);
+
+    background: white;
+}
+
+
+/* Active slide */
+
+.slide-dot.active {
+
+    width: 28px;
+
+    border-radius: 10px;
+
+    background: white;
+}
+
+
+/* =========================================================
+   QUICK ACCESS
+   ========================================================= */
+
+.quick-section {
+
+    padding: 70px 20px;
+
+    max-width: 1200px;
+
+    margin: auto;
+
+}
+
+
+.section-heading {
+
+    text-align: center;
+
+    margin-bottom: 40px;
+
+}
+
+
+.section-heading > span {
+
+    font-size: 32px;
+
+}
+
+
+.section-heading h2 {
+
+    margin: 10px 0 8px;
+
+    color: #2e7d32;
+
+    font-size: 32px;
+
+}
+
+
+.section-heading p {
+
+    margin: 0;
+
+    color: #68756a;
+
+}
+
+
+/* =========================================================
+   FEATURE GRID
+   ========================================================= */
+
+.feature-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+
+}
+
+
+.feature-card {
+
+    background: white;
+
+    border-radius: 16px;
+
+    padding: 25px;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 18px;
+
+    text-decoration: none;
+
+    color: inherit;
+
+    box-shadow:
+        0 5px 18px rgba(0, 0, 0, 0.07);
+
+    border:
+        1px solid #e4ece5;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+
+}
+
+
+.feature-card:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 12px 25px rgba(0, 0, 0, 0.12);
+
+}
+
+
+.feature-icon {
+
+    width: 52px;
+
+    height: 52px;
+
+    min-width: 52px;
+
+    border-radius: 14px;
+
+    background: #e8f5e9;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 25px;
+
+}
+
+
+.feature-card h3 {
+
+    margin: 2px 0 8px;
+
+    color: #2e7d32;
+
+}
+
+
+.feature-card p {
+
+    margin: 0;
+
+    color: #667066;
+
+    line-height: 1.5;
+
+}
+
+
+.coming-soon {
+
+    display: inline-block;
+
+    margin-top: 10px;
+
+    font-size: 12px;
+
+    color: #78907a;
+
+}
+
+
+/* =========================================================
+   ABOUT
+   ========================================================= */
+
+.about-section {
+
+    background: #e8f5e9;
+
+    padding: 80px 20px;
+
+}
+
+
+.about-content {
+
+    max-width: 800px;
+
+    margin: auto;
+
+    text-align: center;
+
+}
+
+
+.section-label {
+
+    color: #2e7d32;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+}
+
+
+.about-content h2 {
+
+    font-size: 34px;
+
+    color: #1b5e20;
+
+    margin: 15px 0;
+
+}
+
+
+.about-content p {
+
+    color: #526154;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+
+    margin: 0;
+
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+footer {
+
+    background: #1b5e20;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 35px 20px;
+
+}
+
+
+.footer-logo {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    font-size: 20px;
+
+}
+
+
+.footer-logo img {
+
+    width: 38px;
+
+    height: 38px;
+
+    border-radius: 50%;
+
+}
+
+
+footer p {
+
+    margin: 10px 0;
+
+    opacity: 0.9;
+
+}
+
+
+footer .copyright {
+
+    font-size: 13px;
+
+    opacity: 0.7;
+
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .feature-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .hero {
+
+        min-height: calc(100vh - 65px);
+
+    }
+
+
+    .hero-content {
+
+        padding: 45px 15px;
+
+    }
+
+
+    .hero-logo img {
+
+        width: 75px;
+
+        height: 75px;
+
+    }
+
+
+    .hero-label {
+
+        font-size: 11px;
+
+        letter-spacing: 2px;
+
+    }
+
+
+    .hero-description {
+
+        font-size: 15px;
+
+        line-height: 1.6;
+
+    }
+
+
+    .quick-section {
+
+        padding: 50px 15px;
+
+    }
+
+
+    .section-heading h2 {
+
+        font-size: 27px;
+
+    }
+
+
+    .feature-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .feature-card {
+
+        padding: 20px;
+
+    }
+
+
+    .about-section {
+
+        padding: 60px 20px;
+
+    }
+
+
+    .about-content h2 {
+
+        font-size: 28px;
+
+    }
+
+
+    .about-content p {
+
+        font-size: 15px;
+
+    }
+
+        .hero-controls {
+
+        bottom: 20px;
+
+        gap: 8px;
+
+    }
+
+
+    .slide-dot {
+
+        width: 8px;
+
+        height: 8px;
+
+    }
+
+
+    .slide-dot.active {
+
+        width: 23px;
+
+    }
+
+}
+
+
+/* =========================================================
+   SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 400px) {
+
+    .hero h1 {
+
+        font-size: 38px;
+
+    }
+
+
+    .hero-description {
+
+        font-size: 14px;
+
+    } 
+
+}
+
+/* =========================================================
+   MYANMAR LANGUAGE SUPPORT
+   ========================================================= */
+
+body {
+
+    word-break: normal;
+
+    overflow-wrap: break-word;
+
+}
+
+
+.hero-description,
+.feature-card p,
+.about-content p {
+
+    line-height: 1.8;
+
+}
+
+
+/* Myanmar text can require slightly more vertical space */
+
+@media (max-width: 600px) {
+
+    .hero-description,
+    .feature-card p,
+    .about-content p {
+
+        line-height: 1.9;
+
+    }
+
+}
+
+/* =========================================================
+   MYANMAR LANGUAGE FONT SUPPORT
+   ========================================================= */
+
+html[lang="my"],
+body {
+    font-family:
+        "Noto Sans Myanmar",
+        "Myanmar Text",
+        "Pyidaungsu",
+        "Noto Sans",
+        "Poppins",
+        Arial,
+        sans-serif;
+}
+
+
+/* Better spacing for Myanmar text */
+
+.hero-label,
+.hero-description,
+.section-heading h2,
+.section-heading p,
+.feature-card h3,
+.feature-card p,
+.about-content h2,
+.about-content p,
+.coming-soon,
+footer p {
+    line-height: 1.8;
+}
+
+
+/* Myanmar hero title */
+
+.hero-content h1 {
+    line-height: 1.5;
+}

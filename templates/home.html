@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<meta
+    name="theme-color"
+    content="#2e7d32"
+>
+
+<meta
+    name="mobile-web-app-capable"
+    content="yes"
+>
+
+<meta
+    name="apple-mobile-web-app-capable"
+    content="yes"
+>
+
+<meta
+    name="apple-mobile-web-app-status-bar-style"
+    content="default"
+>
+
+<meta
+    name="apple-mobile-web-app-title"
+    content="AgriGuard"
+>
+
+<link
+    rel="manifest"
+    href="{{ url_for('static', filename='manifest.json') }}"
+>
+
+<link
+    rel="icon"
+    type="image/png"
+    href="{{ url_for('static', filename='images/agriguard_logo.png') }}"
+>
+
+<script
+    src="{{ url_for('static', filename='js/pwa.js') }}"
+    defer
+></script>
+
+    <title>AgriGuard - Smart Farming System</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='css/home.css') }}"
+    >
+
+</head>
+
+
+<body>
+
+    {% include "navbar.html" %}
+
+
+    <!-- =====================================================
+         HERO SECTION
+         ===================================================== -->
+
+    <section class="hero">
+
+    <div class="hero-background"></div>
+
+    <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+
+            <div class="hero-logo">
+
+                <img
+                    src="{{ url_for('static', filename='images/agriguard_logo.png') }}"
+                    alt="AgriGuard Logo"
+                >
+
+            </div>
+
+
+            <p class="hero-label">
+                {{ lang.smart_farming_system }}
+            </p>
+
+
+            <h1>
+                {{ lang.hero_title_1 }}<br>
+                {{ lang.hero_title_2 }}
+            </h1>
+
+
+            <p class="hero-description">
+
+                {{ lang.hero_description }}
+
+            </p>
+
+
+            {% if session.get('user_id') %}
+
+                <a
+                    href="/dashboard"
+                    class="hero-btn"
+                >
+                    {{ lang.go_dashboard }} 📊 
+                </a>
+
+            {% else %}
+
+                <a
+                    href="/register"
+                    class="hero-btn"
+                >
+                    {{ lang.get_started }} 🌱
+                </a>
+
+            {% endif %}
+
+        </div>
+
+
+    <!-- HERO SLIDE CONTROLS -->
+
+    <div class="hero-controls">
+
+        <button
+            type="button"
+            class="slide-dot active"
+            data-slide="0"
+            aria-label="Show farm image 1"
+        ></button>
+
+        <button
+            type="button"
+            class="slide-dot"
+            data-slide="1"
+            aria-label="Show farm image 2"
+        ></button>
+
+        <button
+            type="button"
+            class="slide-dot"
+            data-slide="2"
+            aria-label="Show farm image 3"
+        ></button>
+
+    </div>
+
+
+    </section>
+
+
+    <!-- =====================================================
+         QUICK ACCESS
+         ===================================================== -->
+
+    <section class="quick-section">
+
+        <div class="section-heading">
+
+
+            <h2>
+                {{ lang.agriguard_tools }}
+            </h2>
+
+            <p>
+                {{ lang.tools_description }}
+            </p>
+
+        </div>
+
+
+        <div class="feature-grid">
+
+
+            <!-- MY CROPS -->
+
+            <a
+                href="/crops"
+                class="feature-card"
+            >
+
+                <div class="feature-icon">
+                    🌱
+                </div>
+
+                <div>
+
+                    <h3>
+                        {{ lang.my_crops }}
+                    </h3>
+
+                    <p>
+                        {{ lang.manage_crops }}
+                    </p>
+
+                </div>
+
+            </a>
+
+
+            <!-- AI DETECTION -->
+
+            <a
+                href="/ai-detection"
+                class="feature-card"
+            >
+
+                <div class="feature-icon">
+                    🤖
+                </div>
+
+                <div>
+
+                    <h3>
+                        {{ lang.ai_disease_detection }}
+                    </h3>
+
+                    <p>
+                        {{ lang.ai_description }}
+                    </p>
+
+                </div>
+
+            </a>
+
+
+            <!-- WEATHER -->
+
+            <a
+    href="/weather"
+    class="feature-card weather-preview"
+>
+
+    <div class="feature-icon">
+        🌦️
+    </div>
+
+    <div>
+
+        <h3>
+            {{ lang.weather }}
+        </h3>
+
+        <p>
+            {{ lang.weather_description }}
+        </p>
+
+        <span class="coming-soon">
+            {{ lang.weather_forecast }} →
+        </span>
+
+    </div>
+
+</a>
+ </div>
+    </section>
+
+    <!-- =====================================================
+         ABOUT AGRIGUARD
+         ===================================================== -->
+
+    <section class="about-section">
+
+        <div class="about-content">
+
+            <span class="section-label">
+                {{ lang.about_agriguard }}
+            </span>
+
+
+            <h2>
+                {{ lang.smart_technology }}
+            </h2>
+
+
+            <p>
+                {{ lang.about_description }}
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+
+    <footer>
+
+        <div class="footer-logo">
+
+            <img
+                src="{{ url_for('static', filename='images/agriguard_logo.png') }}"
+                alt="AgriGuard"
+            >
+
+            <strong>
+                AgriGuard
+            </strong>
+
+        </div>
+
+
+        <p>
+            {{ lang.smart_farming_system_footer }}
+        </p>
+
+
+        <p class="copyright">
+            © 2026 AgriGuard. All rights reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- =====================================================
+         NAVBAR JAVASCRIPT
+         ===================================================== -->
+
+    <script src="{{ url_for('static', filename='js/navbar.js') }}"></script>
+
+    <script>
+
+    /* =====================================================
+       HERO SLIDESHOW
+       ===================================================== */
+
+    const heroBackground =
+        document.querySelector(".hero-background");
+
+    const slideDots =
+        document.querySelectorAll(".slide-dot");
+
+
+    /* Images */
+
+    const heroImages = [
+
+        "/static/images/farm.jpg",
+
+        "/static/images/farm2.jpg",
+
+        "/static/images/farm3.jpg"
+
+    ];
+
+
+    /* Current image */
+
+    let currentImage = 0;
+
+
+    /* Timer */
+
+    let slideTimer;
+
+
+    /* =====================================================
+       CHANGE HERO IMAGE
+       ===================================================== */
+
+    function changeHeroImage(index) {
+
+        /*
+         * Check that the image exists
+         */
+
+        if (
+            index < 0 ||
+            index >= heroImages.length
+        ) {
+            return;
+        }
+
+
+        /*
+         * Fade out
+         */
+
+        heroBackground.style.opacity = "0";
+
+
+        /*
+         * Wait for fade-out
+         */
+
+        setTimeout(() => {
+
+            currentImage = index;
+
+
+            /*
+             * Change image
+             */
+
+            heroBackground.style.backgroundImage =
+                `url("${heroImages[currentImage]}")`;
+
+
+            /*
+             * Fade in
+             */
+
+            heroBackground.style.opacity = "1";
+
+
+            /*
+             * Restart zoom
+
+             */
+
+            heroBackground.classList.remove("zoom");
+
+            void heroBackground.offsetWidth;
+
+            heroBackground.classList.add("zoom");
+
+
+            /*
+             * Update active dot
+             */
+
+            slideDots.forEach((dot, i) => {
+
+                dot.classList.toggle(
+                    "active",
+                    i === currentImage
+                );
+
+            });
+
+        }, 700);
+
+    }
+
+
+    /* =====================================================
+       AUTOMATIC SLIDESHOW
+       ===================================================== */
+
+    function startSlideshow() {
+
+        clearInterval(slideTimer);
+
+
+        slideTimer = setInterval(() => {
+
+            const nextImage =
+                (currentImage + 1) %
+                heroImages.length;
+
+
+            changeHeroImage(nextImage);
+
+        }, 3000);
+
+    }
+
+
+    /* =====================================================
+       MANUAL CONTROLS
+       ===================================================== */
+
+    slideDots.forEach((dot) => {
+
+        dot.addEventListener("click", () => {
+
+            const selectedSlide =
+                Number(dot.dataset.slide);
+
+
+            /*
+             * Don't reload the current image
+             */
+
+            if (
+                selectedSlide === currentImage
+            ) {
+                return;
+            }
+
+
+            /*
+             * Change image
+
+             */
+
+            changeHeroImage(selectedSlide);
+
+
+            /*
+             * Restart automatic slideshow
+             */
+
+            startSlideshow();
+
+        });
+
+    });
+
+
+    /* =====================================================
+       INITIAL IMAGE
+       ===================================================== */
+
+    heroBackground.style.backgroundImage =
+        `url("${heroImages[0]}")`;
+
+
+    /*
+     * Start zoom effect
+     */
+
+    heroBackground.classList.add("zoom");
+
+
+    /*
+     * Start automatic slideshow
+     */
+
+    startSlideshow();
+
+</script>
+
+    
+
+</body>
+
+</html>

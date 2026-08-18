@@ -1,0 +1,147 @@
+<!-- =========================================================
+     AgriGuard Global Navigation
+     Navigation System V3
+     ========================================================= -->
+
+<link rel="stylesheet"
+      href="{{ url_for('static', filename='css/navbar.css') }}">
+
+<nav class="navbar">
+
+    <!-- LOGO -->
+    <a href="/" class="logo">
+
+        <img
+            src="{{ url_for('static', filename='images/agriguard_logo.png') }}"
+            class="logo-img"
+            alt="AgriGuard Logo"
+        >
+
+        <span>AgriGuard</span>
+
+    </a>
+
+
+    <!-- MOBILE MENU BUTTON -->
+    <button
+        class="menu-btn"
+        id="menuBtn"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        aria-controls="navLinks"
+    >
+        <span class="hamburger-icon">☰</span>
+    </button>
+
+
+    <!-- NAVIGATION LINKS -->
+    <div class="nav-links" id="navLinks">
+
+        <!-- HOME -->
+        <a href="/">
+            {{ lang.home }}
+        </a>
+
+
+        {% if session.get('user_id') %}
+
+            <!-- DASHBOARD -->
+            <a href="/dashboard">
+                Dashboard
+            </a>
+
+
+            <!-- MY CROPS -->
+            <a href="/crops">
+                {{ lang.my_crops }}
+            </a>
+
+
+            <!-- AI DETECTION -->
+            <a href="/ai-detection">
+                AI Detection
+            </a>
+
+             <!-- WEATHER PREDICTION -->
+            <a href="/weather">
+                {{ lang.weather }}
+            </a>
+
+
+            <!-- LANGUAGE -->
+            <div class="language-group">
+
+                <a
+                    class="language"
+                    href="/language/en"
+                >
+                    EN
+                </a>
+
+                <a
+                    class="language"
+                    href="/language/mm"
+                >
+                    MM
+                </a>
+
+            </div>
+
+
+            <!-- PROFILE -->
+            <div class="profile-menu">
+
+                <button
+                    type="button"
+                    class="profile-btn"
+                    id="profileBtn"
+                    aria-expanded="false"
+                >
+                    👤 {{ session.get('user_name') }}
+                    <span class="profile-arrow">▼</span>
+                </button>
+
+
+                <div class="dropdown" id="profileDropdown">
+
+                    <a href="/profile">
+                        {{ lang.profile }}
+                    </a>
+
+                    <a href="/logout">
+                        {{ lang.logout }}
+                    </a>
+
+                </div>
+
+            </div>
+
+
+        {% else %}
+
+            <!-- LOGGED-OUT USER -->
+
+            <div class="auth-buttons">
+
+                <a
+                    class="login-btn"
+                    href="/login"
+                >
+                    {{ lang.login }}
+                </a>
+
+                <a
+                    class="login-btn"
+                    href="/register"
+                >
+                    {{ lang.register }}
+                </a>
+
+            </div>
+
+        {% endif %}
+
+    </div>
+
+</nav>

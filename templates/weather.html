@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="{{ session.get('language', 'en') }}">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>AgriGuard - {{ lang.weather }}</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='css/weather.css') }}"
+    >
+
+</head>
+
+<body>
+
+    {% include "navbar.html" %}
+
+
+    <main class="weather-page">
+
+        <section class="weather-header">
+
+            <span class="weather-icon">
+
+                🌦️
+
+            </span>
+
+            <h1>
+                {{ lang.weather }}
+            </h1>
+
+            <p>
+                {{ lang.weather_description }}
+            </p>
+
+        </section>
+
+
+        {% if weather %}
+
+        <!-- =====================================================
+     CITY SELECTOR
+     ===================================================== -->
+<!-- =====================================================
+     CITY SELECTOR
+     ===================================================== -->
+
+<section class="weather-location-selector">
+
+    <div class="location-selector-content">
+
+        <label>
+            📍 {{ lang.select_location }}
+        </label>
+
+
+        <div class="city-dropdown" id="cityDropdown">
+
+
+            <!-- SELECTED CITY -->
+
+            <button
+                type="button"
+                class="city-dropdown-button"
+                id="cityDropdownButton"
+            >
+
+                <span>
+
+                    📍
+                <span id="selectedCityName">
+
+    {% if session.get('language', 'en') == 'mm' %}
+
+        {{ cities[selected_city].my_name }},
+        {{ cities[selected_city].my_country }}
+
+    {% else %}
+
+        {{ cities[selected_city].name }},
+        {{ cities[selected_city].country }}
+
+    {% endif %}
+
+                </span>
+
+                </span>
+
+
+                <span class="dropdown-arrow">
+                    ▼
+                </span>
+
+            </button>
+
+
+            <!-- DROPDOWN MENU -->
+
+            <div
+                class="city-dropdown-menu"
+                id="cityDropdownMenu"
+            >
+
+
+                <!-- SEARCH -->
+
+                <div class="city-search">
+
+                    <input
+                        type="text"
+                        id="citySearch"
+                        placeholder="🔍 Search city..."
+                        autocomplete="off"
+                    >
+
+                </div>
+
+
+                <!-- CITY LIST -->
+
+                <div
+                    class="city-list"
+                    id="cityList"
+                >
+
+                    {% for key, city_info in cities.items() %}
+                    
+                    
+          <button
+           type="button"
+           class="city-option {% if key == selected_city %}selected{% endif %}"
+           data-city="{{ key }}"
+           data-name="{{ city_info.name }}"
+           data-my-name="{{ city_info.my_name }}"
+>
+
+        <span>
+
+        📍
+
+        {% if session.get('language', 'en') == 'mm' %}
+
+            {{ city_info.my_name }}
+
+        {% else %}
+
+            {{ city_info.name }}
+
+        {% endif %}
+
+        </span>
+
+
+    <small>
+
+        {% if session.get('language', 'en') == 'mm' %}
+
+            {{ city_info.my_country }}
+
+        {% else %}
+
+            {{ city_info.country }}
+
+        {% endif %}
+
+    </small>
+
+</button>
+
+            {% endfor %}
+
+                </div>
+
+
+                <!-- NO RESULTS -->
+
+                <div
+                    class="no-city-results"
+                    id="noCityResults"
+                >
+                    {{ lang.no_cities_found }}
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+        <section class="current-weather">
+
+            <div class="location">
+
+                📍 {{ city }}, {{ country }}
+
+            </div>
+
+
+            <div class="temperature">
+
+                {{ weather.current.temperature_2m }}°C
+
+            </div>
+
+
+            <div class="weather-details">
+
+                <div>
+                    💧
+                    <strong>
+                        {{ weather.current.relative_humidity_2m }}%
+                    </strong>
+
+                    <span>
+                        {{ lang.humidity }}
+                    </span>
+                </div>
+
+
+                <div>
+                    💨
+                    <strong>
+                        {{ weather.current.wind_speed_10m }}
+                        km/h
+                    </strong>
+
+                    <span>
+                        {{ lang.wind }}
+                    </span>
+                </div>
+
+
+                <div>
+                    🌧️
+                    <strong>
+                        {{ weather.current.precipitation }}
+                        mm
+                    </strong>
+
+                    <span>
+                        {{ lang.precipitation }}
+                    </span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="forecast-section">
+
+            <h2>
+                 {{ lang.weather_forecast }}
+            </h2>
+
+
+            <div class="forecast-grid">
+
+                {% for i in range(7) %}
+
+                <div class="forecast-card">
+
+                    <strong>
+                        {{ weather.daily.time[i] }}
+                    </strong>
+
+                    <div class="forecast-icon">
+                        🌤️
+                    </div>
+
+                    <div>
+
+                        {{ weather.daily.temperature_2m_max[i] }}°C
+
+                    </div>
+
+                    <small>
+
+                        {{ weather.daily.temperature_2m_min[i] }}°C
+
+                    </small>
+
+                    <p>
+
+                        🌧️
+                        {{ weather.daily.precipitation_probability_max[i] }}%
+
+                    </p>
+
+                </div>
+
+                {% endfor %}
+
+            </div>
+
+        </section>
+
+
+        {% else %}
+
+        <section class="weather-error">
+
+            🌧️
+
+            <h2>
+                {{ lang.weather_unavailable }}
+            </h2>
+
+            <p>
+                {{ lang.weather_try_again }}
+            </p>
+
+        </section>
+
+        {% endif %}
+
+
+    </main>
+
+
+    <script src="{{ url_for('static', filename='js/navbar.js') }}"></script>
+
+    <script>
+
+/* =====================================================
+   CITY DROPDOWN
+   ===================================================== */
+
+const cityDropdown =
+    document.getElementById("cityDropdown");
+
+const cityDropdownButton =
+    document.getElementById("cityDropdownButton");
+
+const cityDropdownMenu =
+    document.getElementById("cityDropdownMenu");
+
+const citySearch =
+    document.getElementById("citySearch");
+
+const cityOptions =
+    document.querySelectorAll(".city-option");
+
+const noCityResults =
+    document.getElementById("noCityResults");
+
+
+/* =====================================================
+   OPEN / CLOSE DROPDOWN
+   ===================================================== */
+
+cityDropdownButton.addEventListener("click", () => {
+
+    cityDropdown.classList.toggle("open");
+
+
+    if (cityDropdown.classList.contains("open")) {
+
+        citySearch.focus();
+
+    }
+
+});
+
+
+/* =====================================================
+   CITY SELECTION
+   ===================================================== */
+
+cityOptions.forEach((option) => {
+
+    option.addEventListener("click", () => {
+
+        const selectedCity =
+            option.dataset.city;
+
+
+        /*
+         * Send selected city to Flask
+         */
+
+        window.location.href =
+            `/weather?city=${encodeURIComponent(selectedCity)}`;
+
+    });
+
+});
+
+
+/* =====================================================
+   SEARCH CITY
+   ===================================================== */
+
+citySearch.addEventListener("input", () => {
+
+    const searchText =
+        citySearch.value
+            .toLowerCase()
+            .trim();
+
+
+    let visibleCities = 0;
+
+
+    cityOptions.forEach((option) => {
+
+        const cityName =
+            option.dataset.name.toLowerCase();
+
+        const myCityName =
+            option.dataset.myName.toLowerCase();
+
+
+        if (
+            cityName.includes(searchText)||
+            myCityName.includes(searchText)
+        ) {
+
+            option.style.display = "flex";
+
+            visibleCities++;
+
+        } else {
+
+            option.style.display = "none";
+
+        }
+
+    });
+
+
+    /*
+     * Show / hide "No cities found"
+     */
+
+    if (visibleCities === 0) {
+
+        noCityResults.style.display = "block";
+
+    } else {
+
+        noCityResults.style.display = "none";
+
+    }
+
+});
+
+
+/* =====================================================
+   CLOSE WHEN CLICKING OUTSIDE
+   ===================================================== */
+
+document.addEventListener("click", (event) => {
+
+    if (
+        !cityDropdown.contains(event.target)
+    ) {
+
+        cityDropdown.classList.remove("open");
+
+    }
+
+});
+
+
+/* =====================================================
+   ESC KEY
+   ===================================================== */
+
+document.addEventListener("keydown", (event) => {
+
+    if (event.key === "Escape") {
+
+        cityDropdown.classList.remove("open");
+
+    }
+
+});
+
+</script>
+
+</body>
+
+</html>
